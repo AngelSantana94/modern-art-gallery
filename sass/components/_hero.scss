@@ -1,0 +1,93 @@
+@use "../abstracts/" as *;
+.container-hero {
+
+    /*Breakpoint tamaño medio del container-hero*/
+    @include breakpoint(md) {
+        display: flex;
+        flex-direction: column;
+        height: 925px;
+    }
+    /*Breakpoint tamaño grande del container-hero*/
+    @include breakpoint (lg) {
+        display: flex;
+    }
+    .container-img {
+        max-width: 110%;
+        max-height: 260px;
+        margin-left: -20px;
+        margin-right: -20px;
+        overflow: hidden;
+        display: flex;
+        justify-content: center; 
+        align-items: flex-end;
+        /*Breakpoint tamaño grande del container-img*/
+        @include breakpoint(lg) {
+            min-width: 725px;     
+            background-color: black;
+            height: 550px;
+            
+
+
+        }
+        .img-hero {
+            width: 100%;
+            height: auto;
+            margin-bottom: 32px;
+            object-fit: cover;
+            object-position: 0 150px ;
+            @include breakpoint(md) {
+                object-fit: cover;
+                object-position: center;
+                width: 700px;
+                height: 800px;
+                z-index: -1;
+                @include breakpoint (lg) {
+                    z-index: 1;
+                    margin-left: 65%;
+                    margin-bottom: 0;
+                    object-position: -65px 100px;
+                }
+            }
+            @include breakpoint(lg) {
+                max-width: 110%;
+                z-index: 2;
+            }
+        
+    }
+        @include breakpoint(md) {
+            display: flex;
+            max-width: 470px ;
+            max-height: 900px;
+            object-position: center;
+            position: absolute;
+    }
+    }
+    .container-description {
+        @include breakpoint(lg) {
+            max-width: 55%;
+        }
+        .title {
+            font-family: $title-font;
+            font-weight: 900;
+            font-size: 60px;
+            line-height: 55px;
+            margin-bottom: 32px;
+            @include breakpoint(md) {
+                margin-left: 50%;
+                margin-top: 30% ;
+            }
+            
+        }
+        .subtitle {
+            font-family: $primary-font;
+            font-weight: 400;
+            font-size: 18px;
+            line-height: 28px;
+            color: $grey-font;
+            margin-bottom: 32px;
+            @include breakpoint(md) {
+                margin-left: 50%;
+            }
+        }
+    }
+}

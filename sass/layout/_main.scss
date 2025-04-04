@@ -1,0 +1,104 @@
+@use "../abstracts/" as *;
+
+.main {
+    color: $white-bg;
+    margin-bottom: 120px;
+    .container {
+        
+        .header-main {
+            @include breakpoint (md) {
+                display: flex;
+                flex-direction: row-reverse;
+
+            }
+            img {
+                max-width: 100%;   
+                margin-bottom: 10px;
+                @include breakpoint(md) {
+                    max-width: 50%;
+                }
+            }
+
+            .text-upster {
+            @include breakpoint(md) {
+                max-width: 50%;
+            }
+            .title-up {
+                font-family: $title-font;
+                font-weight: 900;
+                font-size: 50px;
+                line-height: 45px;
+                color: $black;
+            }
+            .subtitle-up {
+                font-family: $primary-font;
+                font-weight: 400;
+                font-size: 18px;
+                line-height: 28px;
+                color: $grey-font;
+            }
+            }
+        }
+
+        .footer-main {
+            @include breakpoint(md) {
+                display: grid;
+                grid-template-columns: 60% 40%;
+                grid-template-rows: 50% 50%;
+                align-items: stretch;
+                gap: 10px;
+                margin-right: 12px;
+            }
+            .img-02 {
+                max-width: 100%;   
+                margin-bottom: 10px;
+                @include breakpoint(md) {
+                    height: 100%;
+                    max-height: 750px;
+                    grid-column: 1 / span 1; 
+                    grid-row: 1 / span 2; 
+                    
+                }
+            }
+            .img-03 {
+                max-width: 100%;   
+                overflow: hidden;
+                display: flex;
+                justify-content: center; 
+                align-items: flex-end;
+                margin-bottom: 20px;
+                @include breakpoint(md) {
+                    height: 100%;
+                    grid-column: 2 / span 1; 
+                    grid-row: 1 / span 1; 
+                }
+            }
+            .container-text-under {
+                @include breakpoint (md) {
+                    grid-column: 2 / span 2; 
+                    grid-row: 2 / span 1;
+                    margin-bottom: 0; 
+                }
+                background-color: $black;
+                padding: 38px 24px 37px 24px;
+                padding-bottom: 47px;
+                margin-bottom: 120px;
+                .title-under {
+                    font-family: $title-font;
+                    font-weight: 900;
+                    font-size: 50px;
+                    line-height: 45px;
+                    color: white;
+                    margin-bottom: 0;
+                }
+                .subtitle-under {
+                    font-family: $primary-font;
+                    font-weight: 400;
+                    font-size: 18px;
+                    line-height: 28px;
+                    color: white;
+                }
+            }
+        }
+    }
+}

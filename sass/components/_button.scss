@@ -1,0 +1,17 @@
+// -----------------------------------------------------------------------------
+// This file contains all styles related to the button component.
+// -----------------------------------------------------------------------------
+@use "../abstracts/" as *;
+.button-container{
+    margin-right: 99px;
+    margin-bottom: 120px;
+    @include button-1;
+
+    @include breakpoint(md) {
+        margin-left: 50%;
+    }
+
+    @include breakpoint(lg) {
+        margin-left: 70%;
+    }
+}
