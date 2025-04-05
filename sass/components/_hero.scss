@@ -1,92 +1,178 @@
 @use "../abstracts/" as *;
-.container-hero {
-
-    /*Breakpoint tamaño medio del container-hero*/
-    @include breakpoint(md) {
-        display: flex;
-        flex-direction: column;
-        height: 925px;
-    }
-    /*Breakpoint tamaño grande del container-hero*/
-    @include breakpoint (lg) {
-        display: flex;
-    }
-    .container-img {
-        max-width: 110%;
-        max-height: 260px;
-        margin-left: -20px;
-        margin-right: -20px;
-        overflow: hidden;
-        display: flex;
-        justify-content: center; 
-        align-items: flex-end;
-        /*Breakpoint tamaño grande del container-img*/
-        @include breakpoint(lg) {
-            min-width: 725px;     
-            background-color: black;
-            height: 550px;
-            
-
-
-        }
-        .img-hero {
-            width: 100%;
-            height: auto;
-            margin-bottom: 32px;
-            object-fit: cover;
-            object-position: 0 150px ;
+/*Breakpoint tamaño pequeño del container hero*/
+.header {
+    &__container {
+        &-hero {
+            /*Breakpoint tamaño medio del container-hero*/
             @include breakpoint(md) {
-                object-fit: cover;
-                object-position: center;
-                width: 700px;
-                height: 800px;
-                z-index: -1;
-                @include breakpoint (lg) {
-                    z-index: 1;
-                    margin-left: 65%;
-                    margin-bottom: 0;
-                    object-position: -65px 100px;
-                }
+                display: flex;
+                flex-direction: column;
+                height: 925px;
             }
-            @include breakpoint(lg) {
+            /*Breakpoint tamaño grande del container-hero*/
+            @include breakpoint (lg) {
+                display: flex;
+                margin-right: 18px;
+                height: 700px;
+            }
+            /*Breakpoint tamaño extra grande del container-hero*/
+            @include breakpoint(xl) {
+                display: flex;
+                margin-right: 25px;
+                height: 750px;
+            }
+            /*Breakpoint tamaño xxl del container-hero*/
+            @include breakpoint(xxl) {
+                margin-right: 100px;
+                margin-left: -150px;
+                height: 950px;
+            }
+            /*Breakpoint tamaño pequeño del container-img*/
+            &-img {
                 max-width: 110%;
-                z-index: 2;
-            }
+                max-height: 260px;
+                margin-left: -20px;
+                margin-right: -20px;
+                overflow: hidden;
+                display: flex;
+                justify-content: center; 
+                align-items: flex-end;
         
-    }
-        @include breakpoint(md) {
-            display: flex;
-            max-width: 470px ;
-            max-height: 900px;
-            object-position: center;
-            position: absolute;
-    }
-    }
-    .container-description {
-        @include breakpoint(lg) {
-            max-width: 55%;
-        }
-        .title {
-            font-family: $title-font;
-            font-weight: 900;
-            font-size: 60px;
-            line-height: 55px;
-            margin-bottom: 32px;
-            @include breakpoint(md) {
-                margin-left: 50%;
-                margin-top: 30% ;
+                /*Breakpoint tamaño grande del container-img*/
+                @include breakpoint(lg) {
+                    min-width: 725px;     
+                    background-color: black;
+                    height: 550px;
+                }
+                /*Breakpoint tamaño extra grande del container-img*/
+                @include breakpoint(xl) {
+                    min-width: 850px;
+                    height: 650px;
+                }
+                /*Breakpoint tamaño xxl del container-img*/
+                @include breakpoint(xxl) {
+                    min-width: 1050px;
+                    height: 785px;
+                }
+                /*Breakpoint tamaño pequeño de img-hero*/
+                &-image {
+                    width: 100%;
+                    height: auto;
+                    margin-bottom: 32px;
+                    object-fit: cover;
+                    object-position: 0 150px ;
+                    @include breakpoint (md) {
+                        object-fit: cover;
+                        object-position: center;
+                        width: 700px;
+                        height: 800px;
+                        z-index: -1;
+                    }
+                    @include breakpoint (lg) {
+                        z-index: 1;
+                        margin-left: 65%;
+                        margin-bottom: 0;
+                        object-position: -65px 100px;
+                    }
+                    @include breakpoint(xl) {
+                        margin-left: 55%;
+                    }
+                    @include breakpoint(xxl) {
+                        min-width: 680px;
+                        margin-top: -50px;
+                        object-position: -25px -110px;
+                        
+                    }
+                    
+        
+                
             }
-            
-        }
-        .subtitle {
-            font-family: $primary-font;
-            font-weight: 400;
-            font-size: 18px;
-            line-height: 28px;
-            color: $grey-font;
-            margin-bottom: 32px;
-            @include breakpoint(md) {
-                margin-left: 50%;
+                @include breakpoint(md) {
+                    display: flex;
+                    max-width: 470px ;
+                    max-height: 900px;
+                    object-position: center;
+                    position: absolute;
+            }
+            }
+            /*Breakpoint tamaño medio del container-hero*/
+            &-description {
+                @include breakpoint(lg) {
+                    z-index: 2;
+                }
+                /*Breakpoint tamaño pequeño de title*/
+                &-title {
+                    font-family: $title-font;
+                    font-weight: 900;
+                    font-size: 60px;
+                    line-height: 55px;
+                    margin-bottom: 32px;
+                    /*Breakpoint tamaño medio de span*/
+                    span {
+                        @include breakpoint(lg){
+                            display: block;
+                        }
+                    }
+                    /*Breakpoint tamaño medio de title*/
+                    @include breakpoint(md) {
+                        margin-left: 53%;
+                        margin-top: 30% ;
+                        font-size: 70px;
+                        line-height: 70px;
+                    }
+                    /*Breakpoint tamaño grande de title*/
+                    @include breakpoint(lg) {
+                        color: $white-bg;
+                        margin-top: 20%;
+                        margin-left: 10%;
+                    }
+                    /*Breakpoint tamaño extra grande de title*/
+                    @include breakpoint(xl){
+                        font-size: 80px;
+                        line-height: 80px;
+                        margin-top: 12%;
+                        margin-left: 11%;
+                        letter-spacing: 0;
+                    }
+                    /*Breakpoint tamaño xxl de title*/
+                    @include breakpoint(xxl) {
+                        font-size: 90px;
+                        line-height: 90px;
+                        margin-top: 10%;
+                        margin-left: 15%;
+                    }
+                }
+                /*Breakpoint tamaño pequeño de subtitle*/
+                &-text {
+                    font-family: $primary-font;
+                    font-weight: 400;
+                    font-size: 18px;
+                    line-height: 28px;
+                    color: $grey-font;
+                    margin-bottom: 32px;
+                    /*Breakpoint tamaño mediano de subtitle*/
+                    @include breakpoint(md) {
+                        margin-left: 53%;
+                        font-size: 20px;
+                        line-height: 30px;
+                    }
+                    /*Breakpoint tamaño grande de subtitle*/
+                    @include breakpoint(lg) {
+                        margin-left: 69%;
+                        margin-top: -15%;
+                    }
+                    /*Breakpoint tamaño extra grande de subtitle*/
+                    @include breakpoint(xl) {
+                        margin-left: 66%;
+                        width: 295px;
+                        margin-bottom: 55px;
+                    }
+                    /*Breakpoint tamaño xxl de subtitle*/
+                    @include breakpoint(xxl) {
+                        margin-top: -17%;
+                        margin-left: 83%;
+                    }
+                }
             }
         }
     }

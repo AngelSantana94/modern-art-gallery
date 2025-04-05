@@ -2,16 +2,30 @@
 // This file contains all styles related to the button component.
 // -----------------------------------------------------------------------------
 @use "../abstracts/" as *;
+/*Breakpoint tamaño pequeño de button*/
 .button-container{
     margin-right: 99px;
     margin-bottom: 120px;
+
     @include button-1;
 
+    /*Breakpoint tamaño medio de button*/
     @include breakpoint(md) {
-        margin-left: 50%;
+        margin-left: 53%;
     }
-
+    /*Breakpoint tamaño grande de button*/
     @include breakpoint(lg) {
-        margin-left: 70%;
+        margin-left: 69%;
+        z-index: 2;
+        max-height: 70px;
+    }
+    /*Breakpoint tamaño extra grande de button*/
+    @include breakpoint(xl) {
+        margin-left: 66%;
+        
+    }
+    /*Breakpoint tamaño xxl de button*/
+    @include breakpoint(xxl) {
+        margin-left: 83%;
     }
 }

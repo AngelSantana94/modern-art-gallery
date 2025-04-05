@@ -1,36 +1,81 @@
 @use "../abstracts/" as *;
-
-.main {
+/*Breakpoint tamaño pequeño de gallery*/
+.gallery {
     color: $white-bg;
     margin-bottom: 120px;
-    .container {
+    
+    /*Breakpoint tamaño mediano de gallery*/
+    @include breakpoint(md) {
+        margin-left: 20px;
+        margin-right: 20px;
+    }
+    /*Breakpoint tamaño grande de gallery*/
+    @include breakpoint(lg) {
+        margin-left: 20px;
+        margin-right: 20px;
+    }
+    /*Breakpoint tamaño extra grande de gallery*/
+    @include breakpoint(xl) {
+        margin-left: 75px;
+        margin-right: 75px;
+    }
+    /*Breakpoint tamaño xxl de gallery*/
+    @include breakpoint(xxl) {
+        margin-left: 100px;
+        margin-right: 100px;
+    }
+    
+    &__container {
         
-        .header-main {
+        &-hero {
             @include breakpoint (md) {
                 display: flex;
                 flex-direction: row-reverse;
-
             }
-            img {
+            @include breakpoint(lg) {
+                margin-bottom: 5px;
+            }
+            &-image {
                 max-width: 100%;   
                 margin-bottom: 10px;
                 @include breakpoint(md) {
                     max-width: 50%;
                 }
+                @include breakpoint(lg) {
+                    min-width: 62%;
+                    max-height: 325px;
+                    margin-left: 30px;
+                    object-fit: cover;
+                }
+                @include breakpoint (xl) {
+                    margin-left: 140px;
+                    object-fit: cover;
+
+                }
+                @include breakpoint(xxl) {
+                    max-height: 400px;
+                }
             }
 
-            .text-upster {
+            &-intro {
             @include breakpoint(md) {
                 max-width: 50%;
             }
-            .title-up {
+            @include breakpoint(lg) {
+                max-width: 40%;
+            }
+            @include breakpoint(xl) {
+                max-width: 25%;
+                
+            }
+            &-title {
                 font-family: $title-font;
                 font-weight: 900;
                 font-size: 50px;
                 line-height: 45px;
                 color: $black;
             }
-            .subtitle-up {
+            &-text {
                 font-family: $primary-font;
                 font-weight: 400;
                 font-size: 18px;
@@ -40,7 +85,7 @@
             }
         }
 
-        .footer-main {
+        &-grid {
             @include breakpoint(md) {
                 display: grid;
                 grid-template-columns: 60% 40%;
@@ -49,7 +94,10 @@
                 gap: 10px;
                 margin-right: 12px;
             }
-            .img-02 {
+            @include breakpoint(lg) {
+                margin-right: -12px;
+            }
+            &-image--wide {
                 max-width: 100%;   
                 margin-bottom: 10px;
                 @include breakpoint(md) {
@@ -57,10 +105,13 @@
                     max-height: 750px;
                     grid-column: 1 / span 1; 
                     grid-row: 1 / span 2; 
-                    
                 }
+                @include breakpoint(xl) {
+                    min-width: 525px;
+                }
+
             }
-            .img-03 {
+            &-image--square {
                 max-width: 100%;   
                 overflow: hidden;
                 display: flex;
@@ -72,18 +123,41 @@
                     grid-column: 2 / span 1; 
                     grid-row: 1 / span 1; 
                 }
+                @include breakpoint(lg) {
+                    object-fit: cover;
+                    margin-left: -6%;
+                    
+                }
+                @include breakpoint(xl) {
+                    object-fit: cover;
+                    margin-left: -18%;
+                    min-width: 460px;
+                }
             }
-            .container-text-under {
+            &-cta {
+                background-color: $black;
+                padding: 38px 24px 37px 24px;
+                padding-bottom: 47px;
+                margin-bottom: 120px;
                 @include breakpoint (md) {
                     grid-column: 2 / span 2; 
                     grid-row: 2 / span 1;
                     margin-bottom: 0; 
                 }
-                background-color: $black;
-                padding: 38px 24px 37px 24px;
-                padding-bottom: 47px;
-                margin-bottom: 120px;
-                .title-under {
+                @include breakpoint(lg) {
+                    padding-bottom: 0px;
+                    padding-top: 35px;
+                    max-height: 350px;
+                    margin-top: 10px;
+                    margin-right: 32px;
+                    margin-left: -6%;
+                }
+                @include breakpoint(xl) {
+                    margin-left: -18%;
+                    margin-right: 5px;
+                    max-width: 462px;
+                }
+                &-title {
                     font-family: $title-font;
                     font-weight: 900;
                     font-size: 50px;
@@ -91,7 +165,7 @@
                     color: white;
                     margin-bottom: 0;
                 }
-                .subtitle-under {
+                &-text {
                     font-family: $primary-font;
                     font-weight: 400;
                     font-size: 18px;
