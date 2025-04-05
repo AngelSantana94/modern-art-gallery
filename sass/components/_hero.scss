@@ -2,6 +2,8 @@
 /*Breakpoint tamaño pequeño del container hero*/
 .header {
     &__container {
+        padding-left: 20px;
+        padding-right: 20px;
         &-hero {
             /*Breakpoint tamaño medio del container-hero*/
             @include breakpoint(md) {
@@ -25,7 +27,7 @@
             @include breakpoint(xxl) {
                 margin-right: 100px;
                 margin-left: -150px;
-                height: 950px;
+                height: 900px;
             }
             /*Breakpoint tamaño pequeño del container-img*/
             &-img {
@@ -51,7 +53,7 @@
                 }
                 /*Breakpoint tamaño xxl del container-img*/
                 @include breakpoint(xxl) {
-                    min-width: 1050px;
+                    min-width: 1150px;
                     height: 785px;
                 }
                 /*Breakpoint tamaño pequeño de img-hero*/
@@ -136,8 +138,8 @@
                     }
                     /*Breakpoint tamaño xxl de title*/
                     @include breakpoint(xxl) {
-                        font-size: 90px;
-                        line-height: 90px;
+                        font-size: 96px;
+                        line-height: 96px;
                         margin-top: 10%;
                         margin-left: 15%;
                     }
@@ -158,8 +160,8 @@
                     }
                     /*Breakpoint tamaño grande de subtitle*/
                     @include breakpoint(lg) {
-                        margin-left: 69%;
-                        margin-top: -15%;
+                        margin-left: 70%;
+                        margin-top: -18%;
                     }
                     /*Breakpoint tamaño extra grande de subtitle*/
                     @include breakpoint(xl) {
@@ -169,8 +171,10 @@
                     }
                     /*Breakpoint tamaño xxl de subtitle*/
                     @include breakpoint(xxl) {
-                        margin-top: -17%;
-                        margin-left: 83%;
+                        font-size: 22px;
+                        line-height: 32px;
+                        margin-top: -15%;
+                        margin-left: 71%;
                     }
                 }
             }

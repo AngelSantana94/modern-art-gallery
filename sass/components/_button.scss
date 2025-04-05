@@ -15,9 +15,8 @@
     }
     /*Breakpoint tamaño grande de button*/
     @include breakpoint(lg) {
-        margin-left: 69%;
+        margin-left: 70%;
         z-index: 2;
-        max-height: 70px;
     }
     /*Breakpoint tamaño extra grande de button*/
     @include breakpoint(xl) {
@@ -26,6 +25,6 @@
     }
     /*Breakpoint tamaño xxl de button*/
     @include breakpoint(xxl) {
-        margin-left: 83%;
+        margin-left: 71%;
     }
 }

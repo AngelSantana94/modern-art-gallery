@@ -3,7 +3,8 @@
 .gallery {
     color: $white-bg;
     margin-bottom: 120px;
-    
+    margin-right: 20px;
+    margin-left: 20px;
     /*Breakpoint tamaño mediano de gallery*/
     @include breakpoint(md) {
         margin-left: 20px;
@@ -22,7 +23,7 @@
     /*Breakpoint tamaño xxl de gallery*/
     @include breakpoint(xxl) {
         margin-left: 100px;
-        margin-right: 100px;
+        margin-right: 50px;
     }
     
     &__container {
@@ -35,11 +36,15 @@
             @include breakpoint(lg) {
                 margin-bottom: 5px;
             }
+            @include breakpoint(xxl) {
+                margin-bottom: 25px;
+            }
             &-image {
                 max-width: 100%;   
                 margin-bottom: 10px;
                 @include breakpoint(md) {
                     max-width: 50%;
+                    margin-left: 35px;
                 }
                 @include breakpoint(lg) {
                     min-width: 62%;
@@ -47,13 +52,19 @@
                     margin-left: 30px;
                     object-fit: cover;
                 }
-                @include breakpoint (xl) {
-                    margin-left: 140px;
+                @include breakpoint(xl) {
+                    min-height: 390px;
+                    margin-left: 100px;
+                    margin-right: 20px;
                     object-fit: cover;
 
                 }
                 @include breakpoint(xxl) {
-                    max-height: 400px;
+                    min-height: 550px;
+                    min-width: 855px;
+                    margin-right: 70px;
+
+
                 }
             }
 
@@ -65,7 +76,7 @@
                 max-width: 40%;
             }
             @include breakpoint(xl) {
-                max-width: 25%;
+                max-width: 28%;
                 
             }
             &-title {
@@ -74,6 +85,20 @@
                 font-size: 50px;
                 line-height: 45px;
                 color: $black;
+                @include breakpoint(md) {
+                    font-size: 55px;
+                    line-height: 55px;
+                }
+                @include breakpoint(lg) {
+                    font-size: 60px;
+                    line-height: 60px;
+                    margin-top: 15px;
+                }
+                @include breakpoint(xxl) {
+                    font-size: 70px;
+                    line-height: 70px;
+                    margin-top: 50px;
+                }
             }
             &-text {
                 font-family: $primary-font;
@@ -81,6 +106,13 @@
                 font-size: 18px;
                 line-height: 28px;
                 color: $grey-font;
+                @include breakpoint (lg){
+                    font-size: 20px;
+                }
+                @include breakpoint (xxl) {
+                    font-size: 22px;
+                    line-height: 32px;
+                }
             }
             }
         }
@@ -109,6 +141,9 @@
                 @include breakpoint(xl) {
                     min-width: 525px;
                 }
+                @include breakpoint(xxl) {
+                    min-height: 925px;
+                }
 
             }
             &-image--square {
@@ -125,13 +160,19 @@
                 }
                 @include breakpoint(lg) {
                     object-fit: cover;
-                    margin-left: -6%;
+                    margin-left: -12%;
+                    min-width: 425px;
                     
                 }
                 @include breakpoint(xl) {
                     object-fit: cover;
                     margin-left: -18%;
                     min-width: 460px;
+                }
+                @include breakpoint(xxl) {
+                    min-width: 595px;
+                    margin-bottom: 25px;
+                    margin-left: -25%;
                 }
             }
             &-cta {
@@ -142,7 +183,8 @@
                 @include breakpoint (md) {
                     grid-column: 2 / span 2; 
                     grid-row: 2 / span 1;
-                    margin-bottom: 0; 
+                    margin-bottom: 0;
+                    margin-right: 3%; 
                 }
                 @include breakpoint(lg) {
                     padding-bottom: 0px;
@@ -150,12 +192,17 @@
                     max-height: 350px;
                     margin-top: 10px;
                     margin-right: 32px;
-                    margin-left: -6%;
+                    margin-left: -12%;
                 }
                 @include breakpoint(xl) {
                     margin-left: -18%;
                     margin-right: 5px;
                     max-width: 462px;
+                }
+                @include breakpoint(xxl) {
+                    min-width: 600px;
+                    min-height: 435px;
+                    margin-left: -23%;
                 }
                 &-title {
                     font-family: $title-font;
@@ -164,6 +211,11 @@
                     line-height: 45px;
                     color: white;
                     margin-bottom: 0;
+                    @include breakpoint(lg) {
+                        font-size: 60px;
+                        line-height: 60px;
+                        margin-top: 15px;
+                    }
                 }
                 &-text {
                     font-family: $primary-font;
@@ -171,6 +223,9 @@
                     font-size: 18px;
                     line-height: 28px;
                     color: white;
+                    @include breakpoint(lg) {
+                        font-size: 20px;
+                    }
                 }
             }
         }
