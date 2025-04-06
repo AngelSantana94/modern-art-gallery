@@ -570,6 +570,10 @@ body {
     -o-object-fit: cover;
        object-fit: cover;
   }
+  .gallery__container-hero-image:hover {
+    transform: scale(1.1);
+    transition: 0.8s;
+  }
 }
 @media (min-width: 1200px) {
   .gallery__container-hero-image {
@@ -584,7 +588,7 @@ body {
   .gallery__container-hero-image {
     min-height: 550px;
     min-width: 855px;
-    margin-right: 70px;
+    margin-right: 50px;
   }
 }
 @media (min-width: 768px) {
@@ -678,6 +682,10 @@ body {
   .gallery__container-grid-image--wide {
     min-width: 525px;
   }
+  .gallery__container-grid-image--wide:hover {
+    transform: scale(1.1);
+    transition: 0.8s;
+  }
 }
 @media (min-width: 1440px) {
   .gallery__container-grid-image--wide {
@@ -713,6 +721,10 @@ body {
        object-fit: cover;
     margin-left: -18%;
     min-width: 460px;
+  }
+  .gallery__container-grid-image--square:hover {
+    transform: scale(1.1);
+    transition: 0.8s;
   }
 }
 @media (min-width: 1440px) {
@@ -755,6 +767,7 @@ body {
 }
 @media (min-width: 1440px) {
   .gallery__container-grid-cta {
+    padding: 75px 150px;
     min-width: 600px;
     min-height: 435px;
     margin-left: -23%;

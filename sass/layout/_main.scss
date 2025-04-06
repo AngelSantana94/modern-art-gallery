@@ -51,6 +51,10 @@
                     max-height: 325px;
                     margin-left: 30px;
                     object-fit: cover;
+                    &:hover {
+                        transform: scale(1.1);
+                        transition: 0.8s;
+                    }
                 }
                 @include breakpoint(xl) {
                     min-height: 390px;
@@ -62,7 +66,7 @@
                 @include breakpoint(xxl) {
                     min-height: 550px;
                     min-width: 855px;
-                    margin-right: 70px;
+                    margin-right: 50px;
 
 
                 }
@@ -140,6 +144,10 @@
                 }
                 @include breakpoint(xl) {
                     min-width: 525px;
+                    &:hover {
+                        transform: scale(1.1);
+                        transition: 0.8s;
+                    }
                 }
                 @include breakpoint(xxl) {
                     min-height: 925px;
@@ -168,6 +176,10 @@
                     object-fit: cover;
                     margin-left: -18%;
                     min-width: 460px;
+                    &:hover {
+                        transform: scale(1.1);
+                        transition: 0.8s;
+                    }
                 }
                 @include breakpoint(xxl) {
                     min-width: 595px;
@@ -200,6 +212,7 @@
                     max-width: 462px;
                 }
                 @include breakpoint(xxl) {
+                    padding: 75px 150px;
                     min-width: 600px;
                     min-height: 435px;
                     margin-left: -23%;
