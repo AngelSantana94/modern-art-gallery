@@ -1,0 +1,43 @@
+@use "../abstracts/" as *;
+
+.location-footer {
+    max-height: 100%;
+    padding: 45px;
+    display: flex;
+    flex-direction: column;
+    background-color: $gold;
+    justify-content: center;
+    margin-bottom: 0;
+    @include breakpoint (md){
+        padding: 100px 50px;
+        display: flex;
+        flex-direction: row;
+        gap: 100px;
+    }
+
+    &__logo {
+        max-width: 125px;
+        margin-bottom: 20px;
+        @include breakpoint (md) {
+            width: 550px ;
+
+        }
+    }
+    &__text {
+        font-family: $primary-font;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 26px;
+        margin-bottom: 25px;
+        @include breakpoint (md) {
+            margin: 0;
+        }
+    }
+    &__media {
+        display: flex;
+        gap: 25px;
+        @include breakpoint(md){
+            margin-top: 20px;
+        }
+    }
+}

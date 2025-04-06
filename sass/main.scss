@@ -11,12 +11,16 @@
 
 // 3. Layout-related sections
 @use 'layout/footer';
+@use 'layout/location-footer';
 @use 'layout/header';
 @use 'layout/main';
+@use 'layout/location-main';
 
 // 4. Components
 @use 'components/button';
 @use 'components/hero';
+@use 'components/iframe';
+
 // 5. Pages
 @use 'pages/home';
 

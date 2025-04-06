@@ -28,3 +28,18 @@
         margin-left: 71%;
     }
 }
+
+.location-header{
+    position: relative;
+    &__button-2 {
+    position: absolute;
+    @include  button-2 ;
+
+    @include breakpoint(md) {
+        top: 5%;
+        left: 3%;
+    }
+
+    }
+
+}

@@ -1,0 +1,87 @@
+@use "../abstracts/" as *;
+
+.location-main {
+    margin-top: 0;
+    background-color: $black;
+
+    &__container {
+        padding: 55px 30px;
+        @include breakpoint(md){
+            padding: 70px 50px;
+            display: flex;
+            gap: 100px;
+        }
+        @include breakpoint(lg) {
+            padding: 100px 80px;
+            gap: 170px;
+        }
+        &__title {
+            margin-top: 0;
+            font-family: $title-font;
+            font-weight: 900;
+            font-size: 50px;
+            line-height: 45px;
+            color: $white-bg;
+            @include breakpoint(md){
+                font-size: 55px;
+                line-height: 50px;
+            }
+            @include breakpoint(lg){
+                font-size: 70px;
+                line-height: 70px;
+            }
+        }
+        &__addres-container {
+            margin-bottom: 25px;
+            &__street {
+                margin: 0;
+                margin-bottom: 25px;
+                font-family: $title-font;
+                font-weight: 900;
+                font-size: 32px;
+                line-height: 32px;
+                color:$gold;
+                @include breakpoint(lg) {
+                    font-size: 36px;
+                    line-height: 36px;
+                }
+            }
+            p {
+                margin: 0;
+                font-family: $primary-font;
+                font-weight: 400;
+                font-size: 18px;
+                line-height: 28px;
+                color: $white-bg;
+                @include breakpoint(md){
+                    font-size: 18px;
+                }
+                @include breakpoint(lg) {
+                    font-size: 22px;
+                    line-height: 32px;
+                }
+            }
+            p:last-of-type{
+                margin-bottom: 35px;
+            }
+        
+            &__instruction {
+            margin: 0;
+            font-family: $primary-font;
+            font-weight: 400;
+            font-size: 17px;
+            line-height: 28px;
+            color: $white-bg;
+            @include breakpoint (md) {
+                font-size: 18px ;
+                line-height: 28px;
+            }
+            @include breakpoint(lg) {
+                font-size: 22px ;
+                line-height: 32px;
+            }
+            }
+        }
+    }
+
+}
